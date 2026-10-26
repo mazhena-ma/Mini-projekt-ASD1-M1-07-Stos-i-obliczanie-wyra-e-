@@ -1,0 +1,83 @@
+{
+  "date": "2026-10-13T18:51:57.718Z",
+  "browser": "155.0.4283.45",
+  "results": [
+    {
+      "name": "36 testów w prawdziwej przeglądarce",
+      "status": "PASS"
+    },
+    {
+      "name": "Krok przesuwa klatkę",
+      "status": "PASS"
+    },
+    {
+      "name": "Reset przywraca klatkę 1",
+      "status": "PASS"
+    },
+    {
+      "name": "Pauza",
+      "status": "PASS"
+    },
+    {
+      "name": "Nowe dane resetują przebieg",
+      "status": "PASS"
+    },
+    {
+      "name": "Wynik lewostronnego dzielenia",
+      "status": "PASS"
+    },
+    {
+      "name": "Konflikt pozycja 2",
+      "status": "PASS"
+    },
+    {
+      "name": "Pusty stos blokuje pop/peek",
+      "status": "PASS"
+    },
+    {
+      "name": "Push",
+      "status": "PASS"
+    },
+    {
+      "name": "Pop usuwa element",
+      "status": "PASS"
+    },
+    {
+      "name": "Dynamiczne pytanie",
+      "status": "PASS"
+    },
+    {
+      "name": "Audyt: initial",
+      "status": "PASS"
+    },
+    {
+      "name": "Audyt: boundary",
+      "status": "PASS"
+    },
+    {
+      "name": "Audyt: zero",
+      "status": "PASS"
+    },
+    {
+      "name": "Audyt: onp",
+      "status": "PASS"
+    },
+    {
+      "name": "Audyt: left",
+      "status": "PASS"
+    },
+    {
+      "name": "Audyt: empty",
+      "status": "PASS"
+    },
+    {
+      "name": "Zmiana tempa podczas pracy i trwała pauza",
+      "status": "PASS"
+    },
+    {
+      "name": "Brak błędów JS",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

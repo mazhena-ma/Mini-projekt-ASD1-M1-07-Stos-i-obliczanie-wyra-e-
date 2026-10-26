@@ -1,0 +1,1 @@
+const fs=require('fs');console.log('edge',fs.existsSync('C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'));console.log('appdata',process.env.APPDATA);for(const name of ['playwright','playwright-core','puppeteer','pdf-lib']){try{console.log(name,require.resolve(name,{paths:[process.env.APPDATA+'/npm/node_modules/openclaw']}));}catch{console.log(name,'not found');}}

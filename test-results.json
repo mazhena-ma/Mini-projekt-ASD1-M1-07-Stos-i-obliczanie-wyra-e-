@@ -1,0 +1,298 @@
+{
+  "date": "2026-10-13T18:52:19.651Z",
+  "runtime": "v24.20.0",
+  "results": [
+    {
+      "name": "Stos LIFO, peek, pusty",
+      "input": "push 2; push 7; peek; pop; pop",
+      "expected": [
+        7,
+        7,
+        2,
+        true
+      ],
+      "actual": [
+        7,
+        7,
+        2,
+        true
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "Ochrona pustego stosu",
+      "input": "pop; peek",
+      "expected": [
+        true,
+        true
+      ],
+      "actual": [
+        true,
+        true
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "Konflikt nawiasów",
+      "input": "([)]",
+      "expected": 2,
+      "actual": 2,
+      "status": "PASS"
+    },
+    {
+      "name": "Pozostałe otwarcia",
+      "input": "a([",
+      "expected": [
+        1,
+        2
+      ],
+      "actual": [
+        1,
+        2
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "Ignorowanie znaków",
+      "input": "x{a[b(c)]}",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Stan nawiasów",
+      "input": "([)] po 2 otwarciach",
+      "expected": [
+        "( @0",
+        "[ @1"
+      ],
+      "actual": [
+        "( @0",
+        "[ @1"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "ONP kontrolne",
+      "input": "3 + 4 * (2 − 1)",
+      "expected": "3 4 2 1 - * +",
+      "actual": "3 4 2 1 - * +",
+      "status": "PASS"
+    },
+    {
+      "name": "Wynik kontrolny",
+      "input": "3 + 4 * (2 − 1)",
+      "expected": 7,
+      "actual": 7,
+      "status": "PASS"
+    },
+    {
+      "name": "Drugi przykład",
+      "input": "(3+4)*(2-1)",
+      "expected": 7,
+      "actual": 7,
+      "status": "PASS"
+    },
+    {
+      "name": "Lewostronne dzielenie",
+      "input": "8 / 2 / 2",
+      "expected": 2,
+      "actual": 2,
+      "status": "PASS"
+    },
+    {
+      "name": "Jedna liczba",
+      "input": "99",
+      "expected": 99,
+      "actual": 99,
+      "status": "PASS"
+    },
+    {
+      "name": "Stan stosu operatorów",
+      "input": "2+3*4 po odłożeniu *",
+      "expected": [
+        "+",
+        "*"
+      ],
+      "actual": [
+        "+",
+        "*"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "Stan wartości",
+      "input": "2 3 4 * + po *",
+      "expected": [
+        2,
+        12
+      ],
+      "actual": [
+        2,
+        12
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "Kolejność odejmowania",
+      "input": "2 7 -",
+      "expected": -5,
+      "actual": -5,
+      "status": "PASS"
+    },
+    {
+      "name": "Ułamek",
+      "input": "3/2",
+      "expected": 1.5,
+      "actual": 1.5,
+      "status": "PASS"
+    },
+    {
+      "name": "Walidacja: puste",
+      "input": "",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Walidacja: 2++3",
+      "input": "2++3",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Walidacja: -2",
+      "input": "-2",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Walidacja: 2 3",
+      "input": "2 3",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Walidacja: 2(3)",
+      "input": "2(3)",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Walidacja: ()",
+      "input": "()",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Walidacja: (2+3",
+      "input": "(2+3",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Walidacja: 2+3)",
+      "input": "2+3)",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Walidacja: 100",
+      "input": "100",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Walidacja: 3.5",
+      "input": "3.5",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Walidacja: 2^3",
+      "input": "2^3",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Walidacja: 1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1",
+      "input": "1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1+1",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Błędne ONP: 1 0 /",
+      "input": "1 0 /",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Błędne ONP: 1 +",
+      "input": "1 +",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Błędne ONP: 1 2",
+      "input": "1 2",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Błędne ONP: ",
+      "input": "",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Błędne ONP: a",
+      "input": "a",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Błędne ONP: 1 1 - 2 / 0 /",
+      "input": "1 1 - 2 / 0 /",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Dzielenie przez wynik zero",
+      "input": "3/(2-2)",
+      "expected": true,
+      "actual": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Priorytety",
+      "input": "2+3*4",
+      "expected": 14,
+      "actual": 14,
+      "status": "PASS"
+    },
+    {
+      "name": "Nawiasy zmieniają wynik",
+      "input": "(2+3)*4",
+      "expected": 20,
+      "actual": 20,
+      "status": "PASS"
+    }
+  ]
+}
